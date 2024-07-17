@@ -1,0 +1,371 @@
+// _components.scss
+@import url(utilities/_variables.scss);
+@import url(utilities/_mixing.scss);
+
+.contact-image {
+  margin-top: 10px;
+  display: flex;
+}
+
+.Contactanos {
+  background: radial-gradient(circle, #6b8e23, #556b2f, #8b4513); /* De verde musgo a verde oliva y marrón */
+  border-style: dashed;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  form {
+    text-align: left;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      margin-top: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      @include transition(background-color, 0.3s);
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+/*blog*/
+.blog-post {
+  max-width: 800px; /* Cambia este valor según tus preferencias */
+  margin: 0 auto; /* Esto centra el elemento horizontalmente */
+  display: flex;
+  flex-direction: column; /* Cambiamos la dirección del flexbox a columna */
+  margin-bottom: 20px;
+  /* border: 1px solid #ccc; */
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.content {
+  padding: 20px;
+  max-width: 50%; /* Ancho máximo igual al 100% */
+  /* border: 1px solid #ccc; Agrega un borde sólido de 1px */
+}
+.content h2 {
+  margin-top: 0;
+}
+
+.excerpt {
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.comments {
+  margin-top: 20px;
+  resize: horizontal;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.comments h3 {
+  margin-top: 0;
+}
+
+.comments form textarea {
+  width: 50%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.comments form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.comments h3 {
+  margin-top: 0;
+}
+
+.comments .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.comments .content img {
+  max-width: 100px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.comments .content p {
+  flex: 1;
+  margin: 0;
+}
+
+.comments form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments form textarea {
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+  height: 100px;
+}
+
+.comments form button {
+  background-color: #007BFF; /* Ejemplo de color, reemplázalo por tu variable $primary-color */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .comments .content {
+    flex-direction: column;
+  }
+
+  .comments .content img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.imagenproducto, .imagenproducto1, .imagenproducto2, .imagenproducto3 {
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.imagenEquipo {
+  width: 300px;
+  height: 200px;
+}
+
+.variedades {
+  margin-top: 50px;
+  display: inline-flex;
+}
+
+.product-name {
+  margin-left: 30px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+}
+
+.listavariedades {
+  margin-top: 50px;
+}
+
+.item {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.container {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+      align-items: center;
+      text-align: center;
+  }
+}
+.image {
+  max-width: 100%;
+  height: auto;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.text {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+/* Segmento Equipo */
+.containerEquipo {
+  background: radial-gradient(circle, #6b8e23, #556b2f, #8b4513); /* De verde musgo a verde oliva y marrón */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #556b2f; /* Un poco más oscuro que el verde musgo */
+  }
+
+
+  .containerEquipo {
+    display: flex;
+    flex-direction: row-reverse; /* Imagen a la derecha y texto a la izquierda */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en una nueva línea si es necesario */
+    padding: 20px;
+}
+
+.imageEquipo img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 20px; /* Espaciado entre imagen y texto */
+    display:flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.text {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.text p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .containerEquipo {
+        flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .imageEquipo {
+        margin-bottom: 20px; /* Espacio debajo de la imagen en pantallas pequeñas */
+    }
+
+    .text {
+        margin: 0;
+    }
+}
+/*seccion inicio */
+
+.containerInicio {
+  background: radial-gradient(circle, #6b8e23, #556b2f, #8b4513); /* De verde musgo a verde oliva y marrón */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #556b2f; /* Un poco más oscuro que el verde musgo */
+  }
+
+
+  .containerInicio {
+    display: flex;
+    flex-direction:column; /* Imagen columna y texto a la izquierda */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en una nueva línea si es necesario */
+    padding: 20px;
+}
+
+.containerInicio h2 h3{
+  flex-direction: column;
+  padding-inline: 10 px;
+
+}
+.h2 h3 h4{
+  flex-direction: column;
+  padding-inline: 10 px;
+  border-radius: 5px;
+  padding-top: 20 px;
+
+}
+.productinicio img {
+  align-items: center;
+  display:flex;
+}
+.imageInicio img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 20px; /* Espaciado entre imagen y texto */
+    display:flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.text {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.text p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .containerInicio {
+        flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .imageInicio {
+        margin-bottom: 20px; /* Espacio debajo de la imagen en pantallas pequeñas */
+    }
+
+    .text {
+        margin: 0;
+    }
+}
